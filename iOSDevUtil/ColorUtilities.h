@@ -20,15 +20,20 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-#import <UIKit/UIKit.h>
+@interface ColorUtilities : NSObject
 
-//! Project version number for iOSDevUtil.
-FOUNDATION_EXPORT double iOSDevUtilVersionNumber;
+#pragma mark - PUBLIC METHODS
 
-//! Project version string for iOSDevUtil.
-FOUNDATION_EXPORT const unsigned char iOSDevUtilVersionString[];
+// A HEX string to UIColor converter.
 
-// In this header, you should import all the public headers of your framework using statements like
-// #import <iOSDevUtil/PublicHeader.h>
++ (UIColor *)colorFromHEXString:(NSString *)hexString withAlpha:(CGFloat)alpha;
 
-#import <iOSDevUtil/ColorUtilities.h>
+// A random color generator that uses a nice palette.
+
++ (UIColor *)randomNiceColor;
+
+// A random 3-color gradient generator.
+
++ (CAGradientLayer *)randomGradient;
+
+@end
