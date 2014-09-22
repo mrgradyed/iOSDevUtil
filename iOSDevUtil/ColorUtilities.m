@@ -122,14 +122,18 @@
 
     CGFloat brightness = (float)arc4random() / UINT32_MAX;
 
-    // Limit saturation and brightness to get a nice colors range.
+    // Limit saturation and brightness to get a nice colors palette.
+    // Remove the following 2 lines to generate a color from the full range.
 
     saturation = saturation < 0.5 ? 0.5 : saturation;
     brightness = brightness < 0.9 ? 0.9 : brightness;
 
     // Return a random UIColor.
 
-    return [UIColor colorWithHue:hue saturation:saturation brightness:brightness alpha:1];
+    return [UIColor colorWithHue:hue
+                      saturation:saturation
+                      brightness:brightness
+                           alpha:1];
 }
 
 #pragma mark - RANDOM GRADIENT GENERATOR
