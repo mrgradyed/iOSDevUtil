@@ -1,7 +1,6 @@
 *
-!.gitignore
-!LICENSE
 !*/
+!.gitignore
 !*.h
 !*.m
-
+!*.strings
