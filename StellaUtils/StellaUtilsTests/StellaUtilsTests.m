@@ -1,19 +1,19 @@
 //
-//  iOSDevUtilTests.m
-//  iOSDevUtilTests
+//  StellaUtilsTests.m
+//  StellaUtilsTests
 //
-//  Created by emi on 22/09/14.
-//  Copyright (c) 2014 Emiliano D'Alterio. All rights reserved.
+//  Created by emi on 06/01/15.
+//  Copyright (c) 2015 Emiliano D'Alterio. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 
-@interface iOSDevUtilTests : XCTestCase
+@interface StellaUtilsTests : XCTestCase
 
 @end
 
-@implementation iOSDevUtilTests
+@implementation StellaUtilsTests
 
 - (void)setUp {
     [super setUp];
