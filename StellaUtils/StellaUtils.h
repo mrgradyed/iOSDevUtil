@@ -19,4 +19,7 @@ FOUNDATION_EXPORT double StellaUtilsVersionNumber;
 FOUNDATION_EXPORT const unsigned char StellaUtilsVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <StellaUtils/PublicHeader.h>
-#import <iOSDevUtil/ColorUtilities.h>
+#import <StellaUtils/ColorUtilities.h>
+#import <StellaUtils/SharedNetworkIndicatorController.h>
+#import <StellaUtils/SharedLocalizationController.h>
+
