@@ -1,7 +1,9 @@
 *
-!LICENSE
 !*/
 !.gitignore
 !*.h
 !*.m
+!*.swift
 !*.strings
+!README.md
+!LICENSE
