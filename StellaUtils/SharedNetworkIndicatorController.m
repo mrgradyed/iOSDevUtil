@@ -16,6 +16,14 @@
 
 @import UIKit;
 
+@interface SharedNetworkIndicatorController ()
+
+#pragma mark - PROPERTIES
+
+@property(nonatomic) NSInteger networkActivitiesCount;
+
+@end
+
 @implementation SharedNetworkIndicatorController
 
 #pragma mark - ACCESSORS
@@ -36,9 +44,15 @@
 
 #pragma mark - UTILITY METHODS
 
-- (void)networkActivityDidStart { self.networkActivitiesCount++; }
+- (void)networkActivityDidStart
+{
+    self.networkActivitiesCount++;
+}
 
-- (void)networkActivityDidStop { self.networkActivitiesCount--; }
+- (void)networkActivityDidStop
+{
+    self.networkActivitiesCount--;
+}
 
 #pragma mark - CLASS METHODS
 
@@ -56,8 +70,7 @@
     // Create an instance of this class once and only once for the lifetime of the
     // application.
 
-    dispatch_once(&blockHasCompleted,
-                  ^{ sharedNetworkIndicatorController = [[self alloc] initActually]; });
+    dispatch_once(&blockHasCompleted, ^{ sharedNetworkIndicatorController = [[self alloc] initActually]; });
 
     return sharedNetworkIndicatorController;
 }
@@ -68,11 +81,10 @@
 {
     // Return an exception if someone try to use the default init
     // instead of creating a singleton by using the class method.
+    NSString *exceptionString =
+        [NSString stringWithFormat:@"Please use: [%@ sharedInstance] instead.", NSStringFromClass([self class])];
 
-    @throw [NSException exceptionWithName:@"SingletonException"
-                                   reason:@"Please use: [NetworkIndicatorSharedController "
-                                   @"sharedInstance] instead."
-                                 userInfo:nil];
+    @throw [NSException exceptionWithName:@"SingletonException" reason:exceptionString userInfo:nil];
 
     return nil;
 }
